@@ -1,4 +1,64 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Testing
-</p>
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="scotchApp">
+
+<head>
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+  <link rel="stylesheet" href="/style.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="http://getbootstrap.com/examples/sticky-footer/sticky-footer.css" rel="stylesheet">
+
+</head>
+
+<!-- define angular controller -->
+
+<body ng-controller="mainController">
+
+  <header class="plain-header">
+    <div class="container">
+      <nav>
+        <ul class="nav navbar-nav navbar-left" id="home_link">
+          <li><a href="#">TransformIT</a></li>
+        </ul>
+       
+      </nav>
+    </div>
+  </header>
+
+  <div id="main">
+
+    <!-- angular templating -->
+    <!-- this is where content will be injected -->
+    <div ng-view></div>
+
+  </div>
+
+
+  <!-- Footer -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <span style="float:left;">©2021 TransformIT</span>
+
+      <span style="float:right;">
+          
+            <a href="#" id="blog" style="padding-left:20px">Blog</a></span>
+    </div>
+    <!-- end Container-->
+  </footer>
+
+
+  <!-- SPELLS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
