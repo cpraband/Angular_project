@@ -6,5 +6,11 @@ import { Component, VERSION } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Viplove';
+  login(username: string, password: string): boolean {
+    username = username.trim();
+    password = password.trim();
+    if (!username || !password) return false;
+    else if (username == 'admin' && password == 'admin') return true;
+    else return false;
+  }
 }

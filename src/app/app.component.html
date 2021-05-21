@@ -24,7 +24,7 @@
         <ul class="nav navbar-nav navbar-left" id="home_link">
           <li><a href="#">TransformIT</a></li>
         </ul>
-       
+
       </nav>
     </div>
   </header>
@@ -33,9 +33,20 @@
 
     <!-- angular templating -->
     <!-- this is where content will be injected -->
-    
-    <div ng-view>Hello {{name}}</div>
-    
+
+
+
+    <div>
+      <label for="new-hero">SIGN IN: </label>
+      <input id="username" #username />
+      <input id="password" #password />
+
+      <!-- (click) passes input value to add() and then clears the input -->
+      <button class="add-button" (click)="login(username.value, password.value); username.value='';password.value=''">
+  LOGIN
+  </button>
+    </div>
+
 
   </div>
 
@@ -48,7 +59,7 @@
       <span style="float:left;">©2021 TransformIT</span>
 
       <span style="float:right;">
-          
+
             <a href="#" id="blog" style="padding-left:20px">Blog</a></span>
     </div>
     <!-- end Container-->
